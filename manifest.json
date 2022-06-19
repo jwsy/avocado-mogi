@@ -1,0 +1,27 @@
+{
+  "background_color": "#ffffff",
+  "description": "avocado-mogi game",
+  "dir": "ltr",
+  "display": "minimal-ui",
+  "name": "avocado-mogi",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "avocado-mogi",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": ["games", "avocado", "mosquito"],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "sprites/avocado-icon.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "sprites/avocado-o-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "shortcuts": []
+}
