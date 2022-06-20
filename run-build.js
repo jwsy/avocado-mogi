@@ -32,6 +32,7 @@ function buildGame() {
 		if (!fs.existsSync(dir)){
 			fs.mkdirSync(dir);
 		}
+		console.log("buildGame.try cleared dist/");
 
 		// build user code
 		esbuild.buildSync({
