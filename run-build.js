@@ -40,7 +40,7 @@ function buildGame() {
 			sourcemap: true,
 			target: "es6",
 			keepNames: true,
-			logLevel: "silent",
+			logLevel: "debug",
 			entryPoints: ["code/main.js"],
 			outfile: "dist/game.js",
 		});
@@ -50,9 +50,11 @@ function buildGame() {
 			sourcemap: true,
 			target: "es6",
 			keepNames: true,
+			logLevel: "debug",
 			entryPoints: ["helper.ts"],
 			outfile: "dist/helper.js",
 		});
+		console.log("buildGame.try game.js & helper.js built");
 
 	} catch (e) {
 		const loc = e.errors[0].location;
