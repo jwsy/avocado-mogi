@@ -32,7 +32,6 @@ function buildGame() {
 		if (!fs.existsSync(dir)){
 			fs.mkdirSync(dir);
 		}
-		console.log("buildGame.try cleared dist/");
 
 		// build user code
 		esbuild.buildSync({
@@ -40,7 +39,7 @@ function buildGame() {
 			sourcemap: true,
 			target: "es6",
 			keepNames: true,
-			logLevel: "debug",
+			# logLevel: "silent",
 			entryPoints: ["code/main.js"],
 			outfile: "dist/game.js",
 		});
@@ -50,11 +49,10 @@ function buildGame() {
 			sourcemap: true,
 			target: "es6",
 			keepNames: true,
-			logLevel: "debug",
 			entryPoints: ["helper.ts"],
 			outfile: "dist/helper.js",
 		});
-		console.log("buildGame.try game.js & helper.js built");
+		console.log("buildGame esbuild.buildSync() steps complete, game.js & helper.js built");
 
 	} catch (e) {
 		const loc = e.errors[0].location;
