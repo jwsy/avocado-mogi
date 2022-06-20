@@ -2,7 +2,7 @@
 	"name": "kaboom-env",
 	"dependencies": {
 		"@replit/database": "^2.0.1",
-		"esbuild": "^0.14.13",
+		"esbuild": "^0.14.21",
 		"express": "^4.17.1",
 		"fs-extra": "^10.1.0",
 		"howler": "^2.2.3",
