@@ -39,7 +39,7 @@ function buildGame() {
 			sourcemap: true,
 			target: "es6",
 			keepNames: true,
-			// logLevel: "silent",
+			logLevel: "debug",
 			entryPoints: ["code/main.js"],
 			outfile: "dist/game.js",
 		});
