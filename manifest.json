@@ -13,12 +13,12 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "sprites/avocado-icon.png",
+      "src": "sprites/avocado-mogi-icon.png",
       "type": "image/png",
       "sizes": "64x64"
     },
     {
-      "src": "sprites/avocado-o-512.png",
+      "src": "sprites/avocado-mogi-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
