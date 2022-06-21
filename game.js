@@ -4970,7 +4970,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     });
     onUpdate("avocado", (r) => {
       if (r.isOFaced) {
-        r.frame = 1;
+        r.frame = 3;
         r.scale = vec2(avocado.dScale + Math.sin(2.5 * (time() - r.lastOFaceTime)) * 2.8);
         var ct = time();
         if (ct - r.lastOFaceTime > 1.3) {
