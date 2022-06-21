@@ -3,7 +3,7 @@ import {Howl} from "howler";
 
 k = kaboom({
   "fullscreen":true,"startScene":"main",
-  "background":[15,202,235,]
+  "background":[224,222,200,]
 });
 
 // load assets
@@ -202,6 +202,7 @@ scene("game", () => {
 
   function spawnEnemy() {
     let insertPos = pos(rand(10, width() - 10), rand(10, height() - 10));   
+    let wingEntropy = rand() * Math.PI * 2;
 
     let enemySprite = "mogi";
     play("mogi-buzz", { volume: 0.4 });
@@ -212,12 +213,17 @@ scene("game", () => {
       "enemy",
       enemySprite,
       area(),
+      {
+        "wingEntropy": wingEntropy
+      }
     ]);
   }
   
   onUpdate("enemy", (e) => {
     // console.log(e);
     e.scale = vec2(1 + 0.1 * Math.sin(time()));
+    fr = 1 + Math.floor(Math.sin(5 * (e.wingEntropy + time())));
+    e.frame = fr;
   });
 
   onCollide("avocado", "enemy", (b, e) => {
@@ -241,7 +247,7 @@ scene("game", () => {
     b.isOFaced = true;
     b.lastOFaceTime = time();
     score.text = score.value;
-    play("mogi-clap", { volume: 2.4 });
+    play("mogi-clap", { volume: 1.0 });
   });
 
   const score = add([
