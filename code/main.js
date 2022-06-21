@@ -107,7 +107,7 @@ scene("game", () => {
 
   onUpdate("avocado", (r) => {
     if (r.isOFaced) {
-      r.frame = 1;
+      r.frame = 3;
       r.scale = vec2(avocado.dScale + Math.sin(2.5 * (time()- r.lastOFaceTime)) * 2.8);
       // console.log(time() - r.lastOFaceTime)
       var ct = time();
