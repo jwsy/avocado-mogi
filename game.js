@@ -2828,11 +2828,11 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
       let c = n.getContext("webgl", { antialias: true, depth: true, stencil: true, alpha: true, preserveDrawingBuffer: true });
       return { canvas: n, scale: r, gl: c, keyStates: {}, mouseStates: {}, charInputted: [], isMouseMoved: false, isKeyPressed: false, isKeyPressedRepeat: false, isKeyReleased: false, mousePos: f(0, 0), mouseDeltaPos: f(0, 0), time: 0, realTime: 0, skipTime: false, dt: 0, numFrames: 0, isTouch: "ontouchstart" in window || navigator.maxTouchPoints > 0, loopID: null, stopped: false, paused: false, fpsCounter: new Be(), loaded: false };
     })(), l = (() => {
-      var d;
+      var d, h;
       let e = t.gl, n = cn(sn, on), r = Ke(new ImageData(new Uint8ClampedArray([255, 255, 255, 255]), 1, 1)), u = (d = i.background) != null ? d : E(0, 0, 0);
       if (i.background) {
-        let h = v.fromArray(i.background);
-        e.clearColor(h.r / 255, h.g / 255, h.b / 255, 1);
+        let m = v.fromArray(i.background);
+        e.clearColor(m.r / 255, m.g / 255, m.b / 255, (h = i.background[3]) != null ? h : 1);
       }
       e.enable(e.BLEND), e.enable(e.SCISSOR_TEST), e.blendFuncSeparate(e.SRC_ALPHA, e.ONE_MINUS_SRC_ALPHA, e.ONE, e.ONE_MINUS_SRC_ALPHA);
       let c = e.createBuffer();
